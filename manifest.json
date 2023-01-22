@@ -1,12 +1,18 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "surfly protocol",
   "description": "Emulates support of `surfly://` protocol in browsers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icons": {
     "64": "icons/icon.png"
   },
-  "permissions": ["<all_urls>", "webNavigation", "tabs"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{2b3fc25c-9a92-11ed-8179-f02f741aae14}"
+    }
+  },
+  "permissions": ["webNavigation", "tabs"],
+  "host_permissions": ["*://*/*"],
   "background": {
     "scripts": ["background.js"]
   }
