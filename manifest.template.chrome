@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "surfly protocol",
+  "description": "Emulates support of `surfly://` protocol in browsers",
+  "version": "${VERSION}",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "permissions": ["webNavigation", "tabs"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

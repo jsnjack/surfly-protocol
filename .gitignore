@@ -1,2 +1,5 @@
 node_modules
 web-ext-artifacts
+build
+src/manifest.json
+.monova.history
