@@ -9,9 +9,9 @@ function navigationHandler(details) {
             console.log(`Found surfly protocol: ${item}`);
             const newURL = new URL(surflyServer);
             newURL.searchParams.set("url", item.replace(pattern, ""))
-            browser.tabs.update({url: newURL.toString()});
+            chrome.tabs.update({url: newURL.toString()});
         }
       }
 }
 
-browser.webNavigation.onBeforeNavigate.addListener(navigationHandler);
+chrome.webNavigation.onBeforeNavigate.addListener(navigationHandler);
